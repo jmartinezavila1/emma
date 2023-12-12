@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emma's Small Engine</title>
+  <!--Bootstrap-->
+  <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/navbars/">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <!-- Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,300,0,0" />
+  <!-- css-->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style_media.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+  <!--DataTable-->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+  <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+  <!-- Bootstrap for searching -->
+  <!-- Typeahead.js CSS -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.1/bootstrap3-typeahead.min.css">
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <!-- Bootstrap JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- Typeahead.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.1/bootstrap3-typeahead.min.js"></script>
+</head>
+
+<body>
+    <header class="bg-grey">
+        <!-- Nav Menu-->
+        <div class="container-fluid ">
+            <nav class="navbar navbar-expand-lg navbar-light navbar-top-flex">
+                <a class="navbar-brand">
+                    <div class="icon-flex">
+                        <img src="images/logo1.png" alt="company logo">
+                        <span id="logo">Emma's Small Engine</span>
+                    </div>
+                </a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mx-auto my-5 security_form">
+            <form id="login-form" method="post" action="#" >
+            <div style="text-align: right; margin-bottom: 10px;">
+                <a href="#" class="text-decoration-none" >Register</a>
+            </div>
+
+                <div class="security_flex">
+                    <div class="security_flex security_mg30">
+                        <div class="form-group security_mg30" >
+                            <label for="username">Username</label>
+                            <input type="text" id="username" name="username" class="form-control" placeholder="Enter username" required>
+                        </div>
+                        <div class="form-group" >
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" class="form-control" placeholder="Enter password" required>
+                        </div>
+                    </div>
+                    <div class="security_flex2">
+                        <div class="form-group">
+                            <div class="form-check radio-btn">
+                                <input type="radio" id="admin" name="role" value="admin" class="form-check-input">
+                                <label for="admin" class="form-check-label">Admin</label>
+                            </div>
+                            <div class="form-check radio-btn">
+                                <input type="radio" id="sales" name="role" value="sales" class="form-check-input">
+                                <label for="sales" class="form-check-label">Sales</label>
+                            </div>
+                            <div class="form-check radio-btn">
+                                <input type="radio" id="technician" name="role" value="technician" class="form-check-input">
+                                <label for="technician" class="form-check-label">Technician</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group security_btn">
+                    <button type="submit" id="login-btn" class="btn btn-primary" >Log In</button>
+                </div>
+                <div class="form-group security_btn">
+                    <a href="#" class="text-decoration-none">Forgot password?</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Login script -->
+    <script>
+         $(document).ready(function () {
+        updateCredentials();
+
+        $('input[name="role"]').change(function () {
+            updateCredentials();
+        });
+
+        function updateCredentials() {
+            var adminUsername = "emma";
+            var adminPassword = "1234";
+
+            if ($('#admin').prop('checked')) {
+                $('#username').val(adminUsername);
+                $('#password').val(adminPassword);
+            } else if ($('#sales').prop('checked'))  {
+                $('#username').val(adminUsername);
+                $('#password').val(adminPassword);
+            }
+            else {
+                $('#username').val(adminUsername);
+                $('#password').val(adminPassword);
+            }
+        }
+
+        var form = $("#login-form");
+
+        form.on("submit", function (e) {
+            e.preventDefault();
+
+            var username = $("#username").val().trim();
+            var password = $("#password").val().trim();
+            var admin = $("#admin").prop("checked");
+            var sales = $("#sales").prop("checked");
+            var technician = $("#technician").prop("checked");
+
+            var validUsername = "emma";
+            var validPassword = "1234";
+
+            if (username !== validUsername || password !== validPassword) {
+                alert("Invalid username or password");
+            } else if (!admin && !sales && !technician) {
+                alert("Please select a role");
+            } else if (admin && sales || admin && technician || sales && technician) {
+                alert("Please select only one role");
+            } else {
+                localStorage.setItem("username", username);
+                localStorage.setItem("role", admin ? "admin" : sales ? "sales" : "technician");
+
+                if (admin) {
+                    window.location.href = "dashboard.html";
+                } else if (sales) {
+                    window.location.href = "customer.html";
+                } else {
+                    window.location.href = "list_repairs.html";
+                }
+            }
+        });
+    });
+    </script>
+    </main>
+    <footer class="footer">
+        <div>
+          <p class="footer-text">2023 Emma's Small Engines. All rights reserved.</p>
+          <p class="footer-text">1234 Elm Street, Welland, Ontario Canada</p>
+          <p class="footer-text">Phone: (123) 456-7890 | Email: <a
+              href="mailto:info@emmasengines.com">info@emmasengines.com</a></p>
+        </div>
+      </footer>
+</body>
+
+</html>

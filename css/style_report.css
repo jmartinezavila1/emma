@@ -1,0 +1,43 @@
+/* Estilos generales */
+.report-container {
+    font-family: 'Arial', sans-serif;
+}
+
+
+
+/* Estilos de la tabla */
+.report-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  
+}
+
+.report-container th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.report-container th {
+    background-color: #1a89f1;
+    color: white;
+}
+
+/* Otros estilos */
+.report-container h2, h3 {
+    color: #333;
+}
+
+.report-container h3 {
+    text-align: center;
+}
+.report-container h3{
+    align-items: center;
+}
+
+
+.totals{
+    margin-top: 20px;
+    text-align: right;
+}

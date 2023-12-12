@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emma's Small Engine</title>
+    <!--Bootstrap-->
+    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/navbars/">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+    <!-- Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,300,0,0" />
+    <!-- css-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style_media.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+    <!--DataTable-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+
+</head>
+
+<body>
+    <header class="bg-grey">
+        <!-- Nav Menu-->
+        <div class="container-fluid ">
+            <nav class="navbar navbar-expand-lg navbar-light navbar-top-flex">
+                <a class="navbar-brand" href="dashboard.html">
+                    <div class="icon-flex">
+                        <img src="images/logo1.png" alt="company logo">
+                        <span id="logo">Emma's Small Engine</span>
+                    </div>
+                </a>
+                <!-- <div class="collapse navbar-collapse" id="navbarNav"> -->
+                <div id="navbarNav navbar-top-icon-flex ">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="accountDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="icon-top bi bi-gear-fill"></i>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="accountDropdown">
+                                <a class="dropdown-item" href="#">Setting</a>
+                                <a class="dropdown-item" href="#">help</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="adminDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="icon-top bi bi-people-fill"></i>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="adminDropdown">
+                                <a class="dropdown-item" href="#">Profile</a>
+                                <a class="dropdown-item" href="index.html">Logout</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!-- End Sub Menu-->
+    </header>
+    <main>
+        <nav class="navbar navbar-expand-lg navbar-dark" aria-label="Fifth navbar example">
+            <div class="container-fluid">
+              <div class="collapse navbar-collapse" id="navbarsExample05">
+                <div>
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <div id="dashboard-menu">
+                      <li class="nav-item">
+                        <a id="dashboard-link" class="nav-link" aria-current="page" href="dashboard.html">
+                          <i class="icon-bottom bi bi-speedometer"></i>Dashboard</a>
+                      </li>
+                    </div>
+                    <div id="customer-menu" class="boder-left">
+                      <li class="nav-item">
+                        <a id="customer-link" class="nav-link" aria-current="page" href="customer.html">
+                          <i class="icon-bottom bi bi-file-person-fill"></i>Customer</a>
+                      </li>
+                    </div>
+                    <div id="repairs-menu" class="boder-left">
+                      <li class="nav-item">
+                        <a id="repairs-link" class="nav-link" aria-current="page" href="list_repairs.html">
+                          <i class="icon-bottom bi bi-tools"></i>Repairs</a>
+                      </li>
+                    </div>
+                    <div id="maintain-menu" class="boder-left">
+                      <li class="nav-item dropdown">
+                        <a id="maintain-link" class="nav-link dropdown-toggle" href="#" id="dropdown05" data-bs-toggle="dropdown" aria-expanded="false">
+                          <i class="icon-bottom bi bi-person-fill-gear"></i>Maintain</a>
+                        <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown05">
+                          <!-- Add id to submenu items -->
+                          <li id="customer-submenu">
+                            <a class="dropdown-item" href="#"> Customer &raquo; </a>
+                            <ul class="submenu dropdown-menu">
+                              <li><a class="dropdown-item" href="city.html">City</a></li>
+                              <li><a class="dropdown-item" href="province.html">Province</a></li>
+                            </ul>
+                          </li>
+                          <li id="equipment-submenu">
+                            <a class="dropdown-item" href="#"> Equipment &raquo; </a>
+                            <ul class="submenu dropdown-menu">
+                              <li><a class="dropdown-item" href="color.html">Color</a></li>
+                              <li><a class="dropdown-item" href="manufacture.html">Manufacturer</a></li>
+                              <li><a class="dropdown-item" href="type.html">Type</a></li>
+                            </ul>
+                          </li>
+                          <li id="repair-submenu">
+                            <a class="dropdown-item" href="#"> Repair &raquo; </a>
+                            <ul class="submenu dropdown-menu">
+                              <li><a class="dropdown-item" href="parts.html">Parts</a></li>
+                              <li><a class="dropdown-item" href="technician.html">Technicians</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </div>
+                    <div id="warranty-menu" class="boder-left">
+                      <li class="nav-item">
+                        <a id="customer-link" class="nav-link" aria-current="page" href="warranty_report.html">
+                          <i class="icon-bottom bi bi-clipboard2-data-fill"></i>Reports</a>
+                      </li>
+                    </div>
+                  </ul>
+                </div>
+                <!--Search by Customer -->
+                <div class="search-bar">
+                  <input type="search" placeholder="Search by Customer" id="searchInput">
+                  <button type="button" class="search-button" onclick="performSearch()">
+                    <i class="bi bi-search"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </nav>
+          
+
+        <div class="navbar-dark">
+            <div class=" list-top">
+                <div class=" list-top-flex">
+                    <p class="main-title">New Repair</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card2 navbar-dark">
+          <div>
+            <button type="button" class="collapse show cust-collapse" onclick="togglelookupDetails('repair1')">
+                Customer Information <i id="icon-customer1" class="bi bi-caret-down" style="font-size: 15px;"></i>
+            </button>
+          </div>
+
+          <div id="repair1" class="collapsible-content navbar-dark" style="display: block;">
+            <div class="card card-body customerCard" style="border: none; padding-bottom: 20px; height: 150px;">
+                <p class="card-text"> <label class="ft-18">Name: </label> Jhon Doe</p>
+                <p class="card-text"><label class="ft-18">Email: </label> name@domain.com</p>
+                <p class="card-text"><label class="ft-18">Phone:</label> (365)-123-45-678</p>
+                <p class="card-text"></p>
+                <p class="card-text"><label class="ft-18">Adress:</label> Street Address</p>
+                <p class="card-text"><label class="ft-18">Province:</label> Ontario</p>
+                <p class="card-text"><label class="ft-18">City:</label> Welland</p>
+                <p class="card-text"><label class="ft-18">Zip:</label> L3C 6G9</p>
+            </div>
+        </div>
+        <div class="card2 navbar-dark">
+          <div>
+            <button type="button" class="collapse show cust-collapse" onclick="togglelookupDetails('equipment1')">
+                Equipment Information <i id="icon-customer1" class="bi bi-caret-down" style="font-size: 15px;"></i>
+            </button>
+        </div>
+
+        <div id="equipment1" class="collapsible-content navbar-dark" style="display: block;">
+          <div class="card card-body customerCard" style="border: none; padding-bottom: 20px; height: 150px;">
+                <p class="card-text"> <label class="ft-18">Name: </label> Soft Grass Bag</p>
+                <p class="card-text"><label class="ft-18">Model:</label> X350</p>
+                <p class="card-text"><label class="ft-18">Serial Number:</label> 234QWERHJ778</p>
+                <p class="card-text"><label class="ft-18">Color:</label> Blue</p>
+                <p class="card-text"><label class="ft-18">Manufacturer: </label>AGCO</p>
+                <p class="card-text"><label class="ft-18">Type: </label>Push Reel Mower</p>
+                <p class="card-text"><label class="ft-18">Description: </label> Durable and practical bag for collecting grass</p>
+            </div>
+        </div>
+
+        <form id="customerForm" class="form">
+            <div class="form_group">
+                <label for="Date" class="form_label">Date</label>
+                <div class="group-input">
+                    <input type="date" class="form_input" id="date" name="date" required>
+                </div>
+            </div>
+            <div class="form_group">
+                <label for="status" class="form_label">Status</label>
+                <a href="#" class="showPopup btn-add" id="link-button">
+                </a>
+                <div class="group-input">
+                    <select id="status" class="form_input" name="status" required>
+                        <option value="">Select a Status</option>
+                        <option value="">In Process</option>
+                        <option value="">Finished</option>
+                        <option value="">Pending</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form_group">
+                <label for="error" class="form_label">Description Error</label>
+                <textarea class="form-control" rows="2" placeholder="ex. A brief description of the error."></textarea>
+            </div>
+            
+
+            <div class="form_group group_btn button-container">
+
+                <input type="button" onclick="location.href='customer.html'" class="cancel" value="Back">
+                <input type="submit" class="save" value="Save" onclick="location.href='customer.html'">
+                <input type="reset"  class="cancel" value="Cancel">
+                <button id="fillFormButton" class="save">Fill Form</button>
+            </div>
+
+        </form>
+
+        </div>
+    </main>
+    <script src="js/form.js"></script>
+    <script>
+        var userRole = localStorage.getItem("role");
+  
+        
+        if (userRole  === "sales") {
+          $("#dashboard-menu").hide();
+          $("#maintain-menu").hide();
+          $("#reports-menu").hide();
+          $("#repairs-menu").hide();
+          $("#warranty-menu").hide();
+
+          }else if (userRole  === "admin") {
+  
+          }else if (userRole  === "technician") {
+          $("#dashboard-menu").hide();
+          $("#maintain-menu").hide();
+          $("#reports-menu").hide();
+          $("#customer-menu").hide();
+          $("#warranty-menu").hide();
+  
+}
+    </script>
+    <!--For bootstrap menu-->
+    <footer class="footer">
+        <div>
+            <p class="footer-text">2023 Emma's Small Engines. All rights reserved.</p>
+            <p class="footer-text">1234 Elm Street, Welland, Ontario Canada</p>
+            <p class="footer-text">Phone: (123) 456-7890 | Email: <a
+                    href="mailto:info@emmasengines.com">info@emmasengines.com</a></p>
+        </div>
+    </footer>
+
+    <script src="js/cart_help_popup.js"></script>
+    <script src="js/form_equipment.js"></script>
+    <script src="js/dummy_buttons.js"></script>
+    <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emma's Small Engine</title>
+  <!--Bootstrap-->
+  <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/navbars/">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <!-- Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,300,0,0" />
+  <!-- css-->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style_media.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style_report.css">
+  <!--DataTable-->
+  <!-- Bootstrap JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+  <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+  <!-- for Reports in PDF-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.6/jspdf.plugin.autotable.min.js"></script>
+  <script src="assets/js/jspdf-autotable-custom.js"></script>
+  <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+
+
+  <!-- For collapsible dataTable-->
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+  <link href="https://nightly.datatables.net/css/jquery.dataTables.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.js"></script>
+  <script src="https://cdn.datatables.net/select/1.2.1/js/dataTables.select.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+  <header class="bg-grey">
+    <!-- Nav Menu-->
+    <div class="container-fluid ">
+      <nav class="navbar navbar-expand-lg navbar-light navbar-top-flex">
+        <a class="navbar-brand" href="dashboard.html">
+          <div class="icon-flex">
+            <img src="images/logo1.png" alt="company logo">
+            <span id="logo">Emma's Small Engine</span>
+          </div>
+        </a>
+        <!-- <div class="collapse navbar-collapse" id="navbarNav"> -->
+        <div id="navbarNav navbar-top-icon-flex ">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="accountDropdown" role="button" data-bs-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <i class="icon-top bi bi-gear-fill"></i>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="accountDropdown">
+                <a class="dropdown-item" href="#">Setting</a>
+                <a class="dropdown-item" href="#">help</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="adminDropdown" role="button" data-bs-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <i class="icon-top bi bi-people-fill"></i>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="adminDropdown">
+                <a class="dropdown-item" href="#">Profile</a>
+                <a class="dropdown-item" href="index.html">Logo ut</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <!-- End Sub Menu-->
+  </header>
+
+  <main>
+    <nav class="navbar navbar-expand-lg navbar-dark" aria-label="Fifth navbar example">
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbarsExample05">
+          <div>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <div id="dashboard-menu">
+                <li class="nav-item">
+                  <a id="dashboard-link" class="nav-link" aria-current="page" href="dashboard.html">
+                    <i class="icon-bottom bi bi-speedometer"></i>Dashboard</a>
+                </li>
+              </div>
+              <div id="customer-menu" class="boder-left">
+                <li class="nav-item">
+                  <a id="customer-link" class="nav-link" aria-current="page" href="customer.html">
+                    <i class="icon-bottom bi bi-file-person-fill"></i>Customer</a>
+                </li>
+              </div>
+              <div id="repairs-menu" class="boder-left">
+                <li class="nav-item">
+                  <a id="repairs-link" class="nav-link" aria-current="page" href="list_repairs.html">
+                    <i class="icon-bottom bi bi-tools"></i>Repairs</a>
+                </li>
+              </div>
+              <div id="maintain-menu" class="boder-left">
+                <li class="nav-item dropdown">
+                  <a id="maintain-link" class="nav-link dropdown-toggle" href="#" id="dropdown05"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="icon-bottom bi bi-person-fill-gear"></i>Maintain</a>
+                  <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown05">
+                    <!-- Add id to submenu items -->
+                    <li id="customer-submenu">
+                      <a class="dropdown-item" href="#"> Customer &raquo; </a>
+                      <ul class="submenu dropdown-menu">
+                        <li><a class="dropdown-item" href="city.html">City</a></li>
+                        <li><a class="dropdown-item" href="province.html">Province</a></li>
+                      </ul>
+                    </li>
+                    <li id="equipment-submenu">
+                      <a class="dropdown-item" href="#"> Equipment &raquo; </a>
+                      <ul class="submenu dropdown-menu">
+                        <li><a class="dropdown-item" href="color.html">Color</a></li>
+                        <li><a class="dropdown-item" href="manufacture.html">Manufacturer</a></li>
+                        <li><a class="dropdown-item" href="type.html">Type</a></li>
+                      </ul>
+                    </li>
+                    <li id="repair-submenu">
+                      <a class="dropdown-item" href="#"> Repair &raquo; </a>
+                      <ul class="submenu dropdown-menu">
+                        <li><a class="dropdown-item" href="parts.html">Parts</a></li>
+                        <li><a class="dropdown-item" href="technician.html">Technicians</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </div>
+              <div id="customer-menu" class="boder-left">
+                <li class="nav-item">
+                  <a id="customer-link" class="nav-link" aria-current="page" href="warranty_report.html">
+                    <i class="icon-bottom bi bi-clipboard2-data-fill"></i>Reports</a>
+                </li>
+              </div>
+            </ul>
+          </div>
+          <!--Search by Customer -->
+          <div class="search-bar">
+            <input type="search" placeholder="Search by Customer" id="searchInput">
+            <button type="button" class="search-button" onclick="performSearch()">
+              <i class="bi bi-search"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <a href="#" class="btn btn-primary fixed-button showPopup show-help-warranty">
+      <i class="bi bi-question" style="font-size: 1.5em;"></i>
+    </a>
+    <!-- Report tabs -->
+    <ul class="nav nav-tabs" id="myTab" role="tablist" style="padding-top: 15px;">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button"
+          role="tab" aria-controls="home-tab-pane" aria-selected="true">Warranty Report</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button"
+          role="tab" aria-controls="profile-tab-pane" aria-selected="false">Repair Report</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button"
+          role="tab" aria-controls="contact-tab-pane" aria-selected="false">User Activity</button>
+      </li>
+    </ul>
+
+    
+     <!-- hNew -->
+     <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+        <div class="navbar-dark">
+          <div class=" list-top">
+            <form id="reportForm" class="form">
+              <div class="form_group">
+                <label for="StartDate" class="form_label">Start Date:</label>
+                <div class="group-input">
+                  <input type="date" class="form_input" value="2023-11-01" id="StartDate" name="date" required>
+                </div>
+              </div>
+              <div class="form_group">
+                <label for="EndDate" class="form_label">End Date:</label>
+                <div class="group-input">
+                  <input type="date" class="form_input" value="2023-11-30" id="EndDate" name="date" required>
+                </div>
+              </div>
+              <div class="form_group">
+                <label for="company" class="form_label">Company</label>
+                <a href="#" class="showPopup btn-add" id="link-button">
+                </a>
+                <div class="group-input">
+                  <select id="company" class="form_input" name="company" required>
+                    <option value="Briggs & Stratton Corporation">Select a Company</option>
+                    <option value="Briggs & Stratton Corporation">Briggs & Stratton Corporation</option>
+                    <option value="Husqvarna Group">Husqvarna Group</option>
+                    <option value="John Deere">John Deere</option>
+                    <option value="Toro">Toro</option>
+                    <option value="Craftsman">Craftsman</option>
+                    <option value="Snapper  ">Snapper</option>
+                  </select>
+                </div>
+              </div>
+              <div class="group_btn button-container goback">
+                <button type="button" class="save" onclick="warrantyGenerateReport()">View</button>
+                <button type="button" class="save" onclick="warrantyExportReport()">Export</button>
+                <button type="button" class="save" onclick="warrantyExportReport()">Print</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- Warranty -->
+      <div class="list-top" id="warrantyReportContainer" style="display: none;">
+
+      </div>
+      <!-- 2 -->
+      <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+        <div class="navbar-dark">
+          <div class=" list-top">
+            <div class=" list-top-flex">
+              <p class="main-title">Repair Report</p>
+            </div>
+          </div>
+        </div>
+        <!-- Formulario para seleccionar la fecha -->
+        <div class="navbar-dark">
+          <div class=" list-top">
+            <form id="reportForm" class="form">
+              <div class="form_group">
+                <label for="StartDate1" class="form_label">Start Date:</label>
+                <div class="group-input">
+                  <input type="date" class="form_input" value="2023-11-01" id="StartDate1" name="date" required>
+                </div>
+              </div>
+              <div class="form_group">
+                <label for="EndDate1" class="form_label">End Date:</label>
+                <div class="group-input">
+                  <input type="date" class="form_input" value="2023-11-30" id="EndDate1" name="date" required>
+                </div>
+              </div>
+              <div class="form_group">
+                <label for="status1" class="form_label">Status</label>
+                <a href="#" class="showPopup btn-add" id="link-button1">
+                </a>
+                <div class="group-input">
+                  <select id="status" class="form_input" name="status" required>
+                    <option value="">Select a Status</option>
+                    <option value="">In Process</option>
+                    <option value="">Finished</option>
+                    <option value="">Pending</option>
+                  </select>
+                </div>
+              </div>
+              <div class="group_btn button-container goback">
+                <button type="button" class="save" onclick="repairGenerateReport()">View</button>
+                <button type="button" class="save" onclick="repairExportReport()">Export</button>
+                <button type="button" class="save" onclick="warrantyExportReport()">Print</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- Aquí se mostrará el informe -->
+      <div class="list-top" id="RepairReportContainer" style="display: none;">
+
+      </div>
+      <!-- 3 -->
+      <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+        <div class="navbar-dark">
+          <div class=" list-top">
+            <div class=" list-top-flex">
+              <p class="main-title">User Activity Report</p>
+            </div>
+          </div>
+        </div>
+        <!-- Formulario para seleccionar la fecha -->
+        <div class="navbar-dark">
+          <div class=" list-top">
+            <form id="reportForm" class="form">
+              <div class="form_group">
+                <label for="StartDate1" class="form_label">Start Date:</label>
+                <div class="group-input">
+                  <input type="date" class="form_input" value="2023-11-01" id="StartDate1" name="date" required>
+                </div>
+              </div>
+              <div class="form_group">
+                <label for="EndDate1" class="form_label">End Date:</label>
+                <div class="group-input">
+                  <input type="date" class="form_input" value="2023-11-30" id="EndDate1" name="date" required>
+                </div>
+              </div>
+              <div class="form_group">
+                <label for="user" class="form_label">User</label>
+                <a href="#" class="showPopup btn-add" id="link-button">
+                </a>
+                <div class="group-input">
+                    <select id="user" class="form_input" name="user" required>
+                      <option value="">Select a User</option>
+                      <option value="">EJohnson01</option>
+                      <option value="">WRodriguez02</option>
+                      <option value="">WMitchell03</option>
+                      <option value="">SThompson04</option>
+                      <option value="">EParker05</option>
+                      <option value="">ESanchez06</option>
+                      <option value="">AAnderson07</option>
+                    </select>
+                  </div>
+              </div>
+              <div class="form_group">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      Log in 
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      Log out
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      All 
+                    </label>
+                </div>
+              </div>
+
+              <div class="group_btn button-container goback">
+                <button type="button" class="save" onclick="ActvityGenerateReport()">View</button>
+                <button type="button" class="save" onclick="repairExportReport()">Export</button>
+                <button type="button" class="save" onclick="warrantyExportReport()">Print</button>
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- Aquí se mostrará el informe -->
+      <div class="list-top" id="ActvityReportContainer" style="display: none;">
+
+      </div>
+    </div>
+    <!-- hNew -->
+
+    <!-- warranty Exportar a PDF-->
+    <div class="warranty_report">
+      <table id="warrantyReportTablepdf" class="table table-hover" style="display: none;">
+        <thead class="table-light">
+          <tr>
+            <th>Description</th>
+            <th>Customer Name</th>
+            <th>Duration</th>
+            <th>Date</th>
+            <th>Cost</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Warranty 100987747</td>
+            <td>Jamie Dorito</td>
+            <td>6 hrs</td>
+            <td>2023-11-01</td>
+            <td>$50.00</td>
+          </tr>
+          <tr>
+            <td>Warranty 100987748</td>
+            <td>Jane Smith</td>
+            <td>45 hrs</td>
+            <td>2023-11-07</td>
+            <td>$600.00</td>
+          </tr>
+          <tr>
+            <td>Warranty 100987749</td>
+            <td>Juan Smith</td>
+            <td>6 hrs</td>
+            <td>2023-11-23</td>
+            <td>$300.00</td>
+          </tr>
+          <tr>
+            <td>Warranty 100987750</td>
+            <td>Jeremy Domino</td>
+            <td>18 hrs</td>
+            <td>2023-11-06</td>
+            <td>$1000.00</td>
+          </tr>
+          <tr>
+            <td>Warranty 100987751</td>
+            <td>Jerry Doom</td>
+            <td>5 hrs</td>
+            <td>2023-11-15</td>
+            <td>$200.00</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- repair Export to PDF -->
+    <div class="repair_report">
+      <table id="repairReportTablepdf" style="display: none;">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Number</th>
+            <th>Customer</th>
+            <th>Equipment</th>
+            <th>Time Spent</th>
+            <th>Cost of Parts</th>
+            <th>Labor Cost</th>
+            <th>Total Cost</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2023-10-31</td>
+            <td>1023</td>
+            <td>Jamie Dorito</td>
+            <td>Deck Parts</td>
+            <td>3 hrs</td>
+            <td>$50.00</td>
+            <td>$100.00</td>
+            <td>$150.00</td>
+          </tr>
+          <tr>
+            <td>2023-10-31</td>
+            <td>1023</td>
+            <td>Jamie Dorito</td>
+            <td>Deck Parts</td>
+            <td>3 hrs</td>
+            <td>$50.00</td>
+            <td>$100.00</td>
+            <td>$150.00</td>
+          </tr>
+          <tr>
+            <td>2023-10-31</td>
+            <td>1023</td>
+            <td>Jamie Dorito</td>
+            <td>Deck Parts</td>
+            <td>3 hrs</td>
+            <td>$50.00</td>
+            <td>$100.00</td>
+            <td>$150.00</td>
+          </tr>
+          <tr>
+            <td>2023-10-31</td>
+            <td>1023</td>
+            <td>Jamie Dorito</td>
+            <td>Deck Parts</td>
+            <td>3 hrs</td>
+            <td>$50.00</td>
+            <td>$100.00</td>
+            <td>$150.00</td>
+          </tr>
+          <tr>
+            <td>2023-10-31</td>
+            <td>1023</td>
+            <td>Jamie Dorito</td>
+            <td>Deck Parts</td>
+            <td>3 hrs</td>
+            <td>$50.00</td>
+            <td>$100.00</td>
+            <td>$150.00</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!--user Export to PDF-->
+      <div class="activity_report">
+        <table id="ActivityReportTablepdf" style="display: none;">
+          <thead>
+            <tr>
+              <th>User Name</th>
+              <th>Full Name</th>
+              <th>Time Log in</th>
+              <th>Time Log out</th>
+              <th>Duration</th>
+              <th>Role</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>EJohnson01</td>
+              <td>Emma Johnson</td>
+              <td>2023-11-30 8:30am</td>
+              <td>2023-11-30 4:30pm</td>
+              <td>8 hrs</td>
+              <td>Admin</td>
+            </tr>
+            <tr>
+              <td>WRodriguez02</td>
+              <td>Wendy Rodriguez</td>
+              <td>2023-11-28 8:30am</td>
+              <td>2023-11-28 4:30am</td>
+              <td>2 hrs</td>
+              <td>Sales</td>
+            </tr>
+            <tr>
+              <td>WMitchell03</td>
+              <td>William Mitchell</td>
+              <td>2023-11-08 8:30am</td>
+              <td>2023-11-08 4:30am</td>
+              <td>8 hrs</td>
+              <td>Sales</td>
+            </tr>
+            <tr>
+              <td>SThompson04</td>
+              <td>Sam Thompson</td>
+              <td>2023-11-18 8:30am</td>
+              <td>2023-11-18 4:30am</td>
+              <td>8 hrs</td>
+              <td>Ordering and Purchasing</td>
+            </tr>
+            <tr>
+              <td>EParker05</td>
+              <td>Emily Parker</td>
+              <td>2023-11-18 8:30am</td>
+              <td>2023-11-18 4:30am</td>
+              <td>8 hrs</td>
+              <td>Admin</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+
+
+
+      
+
+
+             <!-- Agrega los enlaces a los archivos JS de Bootstrap, DateTimePicker, DataTables y Date Range Picker -->
+          <!-- script for reports-->
+          
+          <script src="js/search.js"></script>
+          <script src="js/warranty_report.js"></script>
+          <script src="js/warranty_report_table.js"></script>
+          <script src="js/repair_report_table.js"></script>
+          <script src="js/repair_report.js"></script>
+          <script src="js/activity_report.js"></script>
+          <script src="js/activity_report_table.js"></script>
+          <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+          <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+          <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+          <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+          <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+          <script src="https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap4.min.js"></script>
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+ 
+
+
+  </main>
+  <footer class="footer">
+    <div>
+      <p class="footer-text">2023 Emma's Small Engines. All rights reserved.</p>
+      <p class="footer-text">1234 Elm Street, Welland, Ontario Canada</p>
+      <p class="footer-text">Phone: (123) 456-7890 | Email: <a
+          href="mailto:info@emmasengines.com">info@emmasengines.com</a></p>
+    </div>
+  </footer>
+ <!-- Kim -->
+  <!-- Help Popup -->
+  <div id="cart-popup1" class="cart-popup1">
+    <div class="cart-content">
+      <h6>Help</h6><br>
+      
+      <div style="margin-bottom: 5px;">
+        <button type="button" class="collapse show" style="padding: 10px;" onclick="togglelookupDetails('help3')">
+            <span>How to create new job</span> <i id="icon-help3" class="bi bi-caret-right" style="font-size: 15px;"></i>
+        </button>
+      </div>
+    
+  
+      <div id="help3" class="collapsible-content help-content">
+        <div style="border: block; padding-bottom: 20px; ">
+            <div style="border: block; padding-bottom: 20px;">
+                <p>1. Begin by navigating to the "Create New Customer" section on the user dashboard or main menu.</p>
+                <p>2. Once there, look for an option or button that is labeled "Add New Customer" or a similar phrase.</p>
+                <p>3. Click on the designated button to initiate the customer creation process.</p>
+                <p>4. Fill in the required information, such as the customer's name, contact details, and any other relevant details.</p>
+                <p>5. Finally, review the entered information for accuracy and completeness before confirming and saving the new customer profile.</p>
+            </div>
+        </div>
+      </div>
+  
+  
+      <div style="margin-bottom: 5px;">
+        <button type="button" class="collapse show" style="padding: 10px;" onclick="togglelookupDetails('help4')">
+            <span>How to edit current job</span> <i id="icon-help4" class="bi bi-caret-right" style="font-size: 15px;"></i>
+        </button>
+      </div>
+  
+      <div id="help4" class="collapsible-content help-content">
+          <div style="border: block; padding-bottom: 20px; ">
+              <div style="border: block; padding-bottom: 20px;">
+                  <p>1. Begin by navigating to the "Create New Customer" section on the user dashboard or main menu.</p>
+                  <p>2. Once there, look for an option or button that is labeled "Add New Customer" or a similar phrase.</p>
+                  <p>3. Click on the designated button to initiate the customer creation process.</p>
+                  <p>4. Fill in the required information, such as the customer's name, contact details, and any other relevant details.</p>
+                  <p>5. Finally, review the entered information for accuracy and completeness before confirming and saving the new customer profile.</p>
+              </div>
+          </div>
+      </div>
+
+        <div style="display: flex; justify-content: center; position: fixed; bottom: 150px;">
+          <button id="closeCart" class="button" >Close</button>
+        </div>
+    </div>
+  </div>
+<!-- End Popup -->
+  
+  <script src="js/cart_help_popup_warranty.js"></script>
+  <script>
+// Ocultar el popup al cargar la página
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("cart-popup1").style.display = "none";
+  });
+
+
+    document
+      .getElementById("closeCart")
+      .addEventListener("click", function () {
+        document.getElementById("cart-popup1").style.display = "none";
+      });
+
+  </script>
+  <!-- Code for tooltips -->
+  <!-- Kim -->
+      
+
+
+
+</body>
+
+</html>

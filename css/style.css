@@ -1,0 +1,928 @@
+/* All about our basic color, font, size */
+:root {
+	--bg-whtie: #ffffff;
+	--bg-light-gery: #f3f3f3;
+	--bg-mlight-gery: #d4d4d4;
+	--bg-grey: #cacaca;
+	--bg-dark-grey: #a7a7a7;
+	--bg-light-black: #2c2c2c;
+	--bg-light-blue: #5591eb;
+	--background-color-btn: #1a89f1;
+	--icon-color: #959494;
+	--font-size-xxxl: 26px;
+	--font-size-xxl: 24px;
+	--font-size-xl: 22px;
+	--font-size-lg: 20px;
+	--font-size-ml: 18px;
+	--font-size-md: 16px;
+	--font-size-sm: 15px;
+	--font-size-xs: 14px;
+	--font-size-xxs: 12px;
+	--font-size-xxxs: 10px;
+	--font-size-vw-xxxl: 2.8vw;
+	--font-size-vw-xxl: 2.4vw;
+	--font-size-vw-xl: 2.0vw;
+	--font-size-vw-lg: 1.8vw;
+	--font-size-vw-ml: 1.6vw;
+	--font-size-vw-md: 1.4vw;
+	--font-size-vw-sm: 1.2vw;
+	--font-size-vw-xs: 1.0vw;
+	--font-size-vw-xxs: 0.8vw;
+	--font-color-gr: #4e4e4e;
+	--font-color-light-gr: #adadad;
+	--font-color--dark-gr: rgb(83, 83, 83);
+	--font-color-wh: #ffffff;
+	--font-color-bl: #5591eb;
+	--font-color-bl-b: #003d99;
+}
+#cart-popup1 {
+	display: none;
+  }
+
+button{
+	border: none;
+}
+/* Temparary Index Card */
+.card2{
+	border: none;
+}
+
+.card-header2{
+	margin-bottom: 0;
+	padding: 8px 72px;
+	background-color: rgba(0,0,0,.03);
+	border-bottom: 1px solid rgba(0,0,0,.125);
+}
+
+.card-text{
+	margin: 0;
+	font-size: 14px;
+}
+
+.card-title{
+	font-weight: bolder;
+	font-size: 18px;
+	line-height: 18px;
+	padding: 0;
+}
+
+.border-success 
+{
+	border-color: var(--bg-dark-grey)!important;
+}
+
+.scrolling-div {
+    width: 100%; /* 원하는 너비 설정 */
+    height: 200px; /* 원하는 높이 설정 */
+    overflow: auto; /* 스크롤이 필요한 경우 스크롤바 표시 */
+}
+
+/* Temparary show-popup */
+.cart-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 15vw;
+    background-color: #fff;
+    box-shadow: -5px 0 5px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.cart-popup1 {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 15vw;
+    background-color: #fff;
+    box-shadow: -5px 0 5px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.cart-content {
+    text-align: left;
+	font-size: 15px;
+}
+
+.show-cart-btn {
+    cursor: pointer;
+}
+
+#close-cart-btn {
+    cursor: pointer;
+}
+
+@keyframes mymove {
+	from {left: 0px;}
+	to {left: 300px;}
+  }
+
+/* Basic */
+
+body {
+	display: flex;
+    height: 100vh;
+	height: 100%;
+	margin: 0;
+    padding: 0;
+	font-family: 'Manrope', 'Arial Narrow', Arial, sans-serif;
+	background: var(--bg-light-gery);
+	font-size: 16px;
+	color: var(--font-color--dark-gr);
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+main {
+	width: 75%;
+	margin: 20px auto;
+	flex-grow: 1;
+	background-color: var(--bg-whtie);
+}
+
+footer {
+	width: 100%;
+	background-color: var(--bg-grey);
+	padding: 10px 50px;
+	text-align: center;
+	white-space: nowrap;
+	bottom: 0;
+}
+
+::placeholder {
+    font-size: var(--font-size-xs); 
+    color: var(--font-color-light-gr); 
+	padding-left: 5px;
+}
+
+/*Menu*/
+i {
+	margin: 0px;
+	font-size: var(--font-size-lg);
+}
+
+img {
+	width: 60px;
+	padding-left: 20px;
+}
+
+ul div{
+	width: 110px;
+}
+
+ul div:hover{
+	background-color: var(--bg-dark-grey);
+}
+
+.navbar-nav div:hover a.nav-link,
+.navbar-nav div:hover i.icon-bottom  {
+	color: var(--font-color-wh); 
+  }
+
+.navbar-expand-lg .navbar-collapse{
+	display: flex;
+	justify-content: space-between;
+  }
+
+.boder-left{
+	border-left: 2px solid var(--bg-light-gery);
+}
+
+#logo {
+	margin-left: 5px;
+	font-weight: bold;
+	font-size: var(--font-size-xxl);
+}
+
+.bg-grey{
+	background-color: var(--bg-mlight-gery);
+}
+
+.container-fluid{
+	width: 75%;
+	padding: 0;
+}
+
+.navbar-top-flex {
+	display: flex;
+	margin: auto;
+	justify-content: space-between;
+	align-items: stretch;
+	flex-wrap: nowrap;
+}
+
+.navbar-nav{
+	display: flex;
+	flex-direction: row;
+}
+
+.navbar {
+	/* height: 50px; */
+	margin-bottom: 0px;
+	padding: 0;
+}
+
+.navbar-dark {
+	border-bottom: 5px solid var(--bg-light-gery);
+  	/* border-bottom: 5px solid var(--bg-light-gery); */
+	/* background-color: var(--bg-light-black); */
+}
+
+.navbar>.container-fluid{
+	width: 100%;
+}
+
+/* menu test*/
+.dropdown-menu li{
+      position: relative;
+  }
+  .dropdown-menu .submenu{ 
+      display: none;
+      position: absolute;
+      left:100%; top:-7px;
+  }
+  .dropdown-menu .submenu-left{ 
+      right:100%; left:auto;
+  }
+  
+  .dropdown-menu > li:hover{ background-color: #f1f1f1 }
+  .dropdown-menu > li:hover > .submenu{
+      display: block;	
+  }
+  .navbar-nav.ml-auto {
+      margin-left: auto;
+      margin-right: 50px;
+  }
+
+/*menu teste end*/
+.icon-flex {
+	display: flex;
+	align-items: center;
+}
+
+.icon-top {
+	text-decoration: none;
+	margin-bottom: 4px;
+	/* Space between icon and text */
+}
+
+.icon-bottom {
+	display: block;
+	color: var(--font-color--dark-gr);
+	text-decoration: none;
+}
+
+.nav-item {
+	margin: 0 6px;
+	text-align: center;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+	color: black;
+}
+.dropdown-menu li {
+	position: relative;
+}
+
+.dropdown-menu .submenu {
+	display: none;
+	position: absolute;
+	left: 100%;
+	top: -7px;
+}
+
+.dropdown-menu .submenu-left {
+	right: 100%;
+	left: auto;
+}
+
+.dropdown-menu>li:hover {
+	background-color: #f1f1f1
+}
+
+.dropdown-menu>li:hover>.submenu {
+	color: var(--font-color--dark-gr);
+}
+
+/*End Menu*/
+
+/* Forms*/
+.search-bar {
+    display: flex;
+    position: relative;
+    align-items: center;
+    border-radius: 5px;
+    padding: 5px;
+	margin-right: 15px;
+}
+
+.search-bar input {
+	height: 35px;
+    border: none;
+    outline: none;
+    flex: 1;
+	padding: 0 15px;
+	font-size: var(--font-size-sm);
+}
+
+.table-btn-flex{
+	display: flex;
+}
+
+.search-button {
+	height: 35px;
+    margin: 0;
+    background-color: grey; /* 파란 배경색 */
+    border: none;
+    cursor: pointer;
+    padding: 0 5px;
+}
+
+.search-button i {
+    color: white; /* 돋보기 아이콘 텍스트 색상을 흰색으로 설정 */
+}
+
+.search-button:hover{
+	background-color: var(--background-color-btn);
+}
+
+.search-icon {
+    z-index: 1; /* 아이콘을 버튼 위에 표시 */
+    position: absolute;
+    right: 10px; /* 돋보기 아이콘을 오른쪽에 정렬 */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.row{
+	padding-top: 15px;
+}
+
+
+
+.card-body{
+	height: 200px;
+}
+
+.card-body1{
+	height: 95px;
+	padding: 20px;
+}
+
+.card-body2{
+	height: 120px;
+	padding: 20px;
+}
+
+.card-text .ft-18{
+	padding: 0;
+	font-size: var(--font-size-sm);
+}
+.container-wrap{
+	display: flex;
+	justify-content: space-evenly;
+	padding: 20px;
+}
+/* List for searching */
+#myList {
+    display: none;
+}
+
+/* style for seraching control Data Table */
+.dataTables_filter input {
+	width: 250px; /* Set the desired width */
+	font-size: var(--font-size-sm);
+}
+
+/* style for reports Data table */
+td.details-control {
+	text-align:center;
+	color:#1a89f1;
+cursor: pointer;
+}
+tr.shown td.details-control {
+text-align:center; 
+color:#4e4e4e;
+}
+
+#reportTablepdf{
+	width: 100%;
+  }
+  
+#reportTablepdf  th {
+	height: 70px;
+  }
+#reportTablepdf tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+#reportTablepdf th {
+	background-color:#1a89f1;
+	color: white;
+  }
+
+.form {
+	width: 90%;
+	margin: auto;
+	padding-top: 25px;
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 20px;
+}
+
+
+/* Customer card below tittle */
+.customerCard {
+	/* margin-left: 50px; */
+	/* margin-right: 300px; */
+	width: 90%;
+	margin: auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	gap: 10px;
+}
+
+
+/* Customer/Equipment card below tittle */
+.customerEquipmentCard {
+	margin-left: 10px;
+	margin-right: 10px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 5px;
+	
+}
+.customerCard label{
+	font-size:12px;
+}
+.list-top{
+	width: 90%;
+	margin: auto;
+}
+
+.list-top-flex{
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 0 ;
+	height: 60px;
+}
+
+.security_flex{
+	display: flex; 
+	flex-direction: column;
+}
+
+.security_flex2{
+	display: flex; justify-content: center; margin-bottom: 20px;
+}
+
+.security_mg30{
+	margin-bottom: 30px;
+}
+
+.radio-btn{
+	display: inline-block;
+	margin-right: 15px;
+}
+
+.security_btn{
+	text-align: center;
+}
+a {
+	text-decoration: none;
+}
+
+.btn-add {
+	position: relative;
+	float: right;
+	padding: 0px;
+	font-size: var(--font-size-xs);
+}
+
+table {
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-top: 10px;
+}
+
+input,
+select {
+	box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
+}
+
+label {
+	font-weight: 500;
+	padding: 0 0 10px 10px;
+	color: var(--font-color-bl);
+}
+
+
+.bold-text {
+	font-weight: 300;
+}
+
+.dropdown-menu a.dropdown-item {
+	font-size: 15px;
+	font-weight: 600;
+	color: #000000;
+
+}
+
+.dropdown-menu {
+	width: 10%;
+	right: 0;
+
+}
+
+.dropdown-menu a.dropdown-item:hover {
+	font-weight: 300;
+	background-color: #dfdede;
+	color: white;
+	/* Optionally, change text color to white on hover */
+}
+
+.cust-collapse{
+	padding: 5px 0 5px 50px; 
+	background-color: var(--bg-light-blue);
+	color: var(--font-color-wh);
+	width: 100%;
+	text-align: left;
+}
+
+
+.form-label {
+	display: block;
+	font-weight: 700;
+	padding: 10px;
+	cursor: pointer;
+}
+
+
+.form_input{
+	width: 85%;
+	height: 35px;
+	background: #fff;
+	border: 3px solid transparent;
+	border-radius: 3px;
+	line-height: 45px;
+	padding: 0 40px 0 10px;
+	transition: .3s ease all;
+	align-items: center;
+}
+/* for select */
+.bootstrap-select > .dropdown-menu > .dropdown-menu li a {
+	
+	width: 100%;
+	
+	}
+	.bootstrap-select > .btn {
+	width: 100%!important;
+	
+	}
+
+
+.form_input:focus {
+	border: 3px solid #0075FF;
+	outline: none;
+	box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
+}
+
+.group_btn {
+	padding: 30px;
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	gap: 15px;
+}
+
+.footer-text {
+	margin-bottom: 0px;
+	font-size: var(--font-size-xxs);
+}
+
+.modal {
+	display: none;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	align-items: center;
+	justify-content: center;
+	padding-top: 500px;
+	padding-left: 600px;
+}
+
+.modal-content {
+	padding: 20px;
+	max-width: 90%;
+	/* max size of te modal */
+}
+
+.main-title {
+	font-size: var(--font-size-lg);
+	font-weight: 700;
+	margin: 0;
+	line-height: 36px;
+}
+
+.button{
+	width: 160px;
+	padding: 5px 20px;
+	background-color: var(--background-color-btn);
+	color: var(--font-color-wh);
+	border: none;
+	cursor: pointer;
+}
+
+.table{
+	border: none;
+}
+
+.tbody-flex{
+	display: flex;
+}
+
+
+/* .goback{
+	display: flex;
+	justify-content: center;
+	padding: 20px 0px;
+} */
+
+.save,
+.repairListed,
+.editRepair,
+.cancel,
+.newCustomer,
+.editCustomer,
+.editManufacture,
+.showPopup2,
+.editCity,
+.editEquipment,
+.edit_customerEquipment,
+.showPopup {
+	padding: 5px 15px;
+	background-color: var(--bg-dark-grey);
+	color: var(--font-color-wh);
+	border: none;
+	cursor: pointer;
+	margin-right: 5px;
+}
+
+.showPopupNew {
+	background-color: var(--background-color-btn);
+	width: 160px;
+}
+
+.showPopup2:hover,
+.editCustomer:hover,
+.repairListed:hover,
+.editRepair:hover,
+.edit_customerEquipment:hover,
+.editEquipment:hover,
+.showPopup:hover {
+	background-color: var(--background-color-btn);
+}
+.btn-detail-close{
+	display: flex; 
+	justify-content: flex-start; 
+	align-items: flex-start;
+}
+
+.btn-detail, .btn-repair{
+	padding: 0px 10px;
+	margin: 0 6px;
+	color: var(--font-color-bl);
+	border: none;
+	cursor: pointer;
+}
+
+.showPopup.btn-add {
+	background: none;
+	border: none;
+	padding-right: 0px;
+	padding-left: 5px;
+	text-decoration: none;
+	cursor: pointer;
+	color: var(--font-color-gr);
+	font-size: var(--font-size-xxxl);
+}
+
+.showPopup.btn-add:hover {
+	background-color: #EFEFEF;
+}
+
+.img-sm {
+	width: 40px;
+}
+
+table.dataTable{
+	padding: 0;
+}
+
+/* Collapsible function on the card*/
+.collapsible-btn {
+    background-color: var(--bg-light-gery);
+    color: var(--font-color--dark-gr);
+    cursor: pointer;
+    padding: 10px;	
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    font-size: var(--font-size-md);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.collapsible-content {
+	display: none;
+  }
+
+
+
+/* Collapsible button hover effect */
+.collapsible-btn:hover {
+    background-color: var(--bg-grey);
+    color: var(--font-color-wh);
+}
+
+/* Collapsible content style */
+.collapsible-content {
+    max-height: auto;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+/* Collapsible content when expanded */
+.collapsible-content.active {
+    max-height: 500px; /* Set a value that is larger than the expected content height */
+    transition: max-height 0.3s ease;
+}
+
+.collapsible-btn {
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+  }
+  .collapsible-btn h5 {
+	margin-right: 20px; /* Adjust the spacing between icon and job title */
+	padding-left: 20px;
+  }
+
+
+/* IDs */
+#message {
+	color: #008F39;
+	font-size: 30px;
+}
+
+#customerTable, 
+#listrepairTable,
+#cityTable,
+#provinceTable,
+#manufactureTable,
+#typeTable,
+#reportTable
+{
+	border: none;
+}
+
+/* Style for table header */
+#customerTable th,
+#listrepairTable th,
+#cityTable th,
+#provinceTable th,
+#colorTable th,
+#manufactureTable th,
+#typeTable th,
+#reportTable th
+ {
+	background-color: var(--bg-light-gery);
+	color: var(--font-color--dark-gr);
+	font-size: 16px;
+}
+
+/* Style for table cells */
+#customerTable td, 
+#listrepairTable td,
+#cityTable td,
+#provinceTable td,
+#colorTable td,
+#manufactureTable td,
+#typeTable td,
+#reportTable td
+{
+	font-size: 16px;
+}
+
+#customerTable_wrapper,
+#equipmentTable_wrapper,
+#listrepairTable_wrapper,
+#cityTable_wrapper,
+#provinceTable_wrapper,
+#partTable_wrapper,
+#colorTable_wrapper,
+#manufactureTable_wrapper,
+#typeTable_wrapper,
+#reportTable_wrapper {
+	width: 90%;
+	margin: auto;
+	padding-top: 25px;
+}
+
+#bottom {
+	padding-top: 100px;
+	padding-bottom: 100px;
+	font-size: 20px;
+}
+
+#bottom_form {
+	padding-top: 10px;
+	padding-bottom: 50px;
+	font-size: 25px;
+}
+
+#newCustomer {
+	height: 40px;
+}
+
+#newCustomer:hover {
+	background-color: var(--bg-dark-grey);
+}
+
+/* Custom CSS for larger chart elements */
+.chart-container {
+	width: 500px;
+	height: 300px;
+}
+
+/* Styles for the popup */
+.popup,
+.popup2 {
+	display: none;
+	z-index: 1000;
+	width: 300px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 20px;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Style for the dark overlay */
+.overlay,
+.overlay2 {
+	display: none;
+	z-index: 999;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.6);
+}
+/* boton flotante */
+.fixed-button {
+	position: fixed;
+	bottom: 40px; /* Ajusta según la posición deseada hacia arriba */
+	left: 20px;
+	z-index: 1000;
+	border-radius: 50%; /* Hace que el botón sea circular */
+	width: 60px; /* Ajusta según el tamaño deseado */
+	height: 60px; /* Ajusta según el tamaño deseado */
+	background-color: #007bff; /* Color de fondo del botón */
+	color: #fff; /* Color del texto/icono */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 32px; /* Ajusta según el tamaño deseado del icono */
+	border: none; /* Quita el borde */
+	outline: none; /* Quita el contorno al hacer clic */
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutíl */
+}
+
+.fixed-button:hover {
+	background-color: #0056b3; /* Cambia el color de fondo al pasar el mouse */
+}
+
+.custom-tooltip {
+    border: none; 
+    background-color: transparent; 
+    padding: 0; 
+    color: #6c757d; 
+}
+.popover {
+	background-color: rgba(255, 255, 255, 0.8); /* Adjust the opacity (fourth parameter) as needed */
+	color: #000; /* Set the text color */
+	border: 1px solid #ccc; /* Set the border color */
+}
+
